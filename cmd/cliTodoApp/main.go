@@ -18,7 +18,7 @@ func main() {
 		//if flag has add option make a new flag set that looks at the args after flag add
 		addCmd := flag.NewFlagSet("add", flag.ExitOnError)
 		title = addCmd.String("title", "root", "a string")
-		desc = addCmd.String("d", "", "description")
+		desc = addCmd.String("c", "personnal", "category")
 		addCmd.Parse(os.Args[2:])
 	}
 

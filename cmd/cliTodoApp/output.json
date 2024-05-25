@@ -1,8 +1,10 @@
-[{"title":"Go shoping","desc":"buy some  bread","completed":false,"id":1}
-,{"title":"finsh homework","desc":"math propblems chapter 1","completed":true,"id":2}
-,{"title":"fjkdfdsfjkl","desc":"jfklsdfjlkfj","completed":false,"id":3}
-,{"title":"fjkdfdsfjkl","desc":"jfklsdfjlkfj","completed":false,"id":4}
-,{"title":"fjkdfdsfjkl","desc":"jfklsdfjlkfj","completed":false,"id":5}
-,{"title":"fjkdfdsfjkl","desc":"jfklsdfjlkfj","completed":false,"id":6}
-,{"title":"clean","desc":"","completed":false,"id":7}
+[{"item":"finish math problems ch.5","category":"school","completed":false,"id":1}
+,{"item":"clean the garbage","category":"personnal","completed":false,"id":2}
+,{"item":"watch recorded math lecture","category":"school","completed":false,"id":3}
+,{"item":"watch recorded math lecture","category":"school","completed":false,"id":4}
+,{"item":"watch recorded math lecture","category":"school","completed":false,"id":5}
+,{"item":"watch recorded physics lecture","category":"school","completed":false,"id":6}
+,{"item":"watch recorded physics lecture","category":"school","completed":false,"id":7}
+,{"item":"watch recorded physics lecture","category":"school","completed":false,"id":8}
+,{"item":"watch recorded physics lecture","category":"school","completed":false,"id":9}
 ]
