@@ -8,10 +8,10 @@ import (
 
 // struct for todo element
 type Todo struct {
-	Title     string
-	Desc      string
-	Completed bool
-	Id        int
+	Title     string `json:"title"`
+	Desc      string `json:"desc"`
+	Completed bool   `json:"completed"`
+	Id        int    `json:"id"`
 }
 
 func ListAll(fileName string) {
@@ -24,10 +24,32 @@ func ListAll(fileName string) {
 
 func saveToJson(list []Todo, filename string) {
 	//save each todo item in json file
-	file, _ := os.OpenFile(filename, os.O_CREATE, os.ModePerm)
+
+	// Open a new file for writing
+	file, err := os.Create("output.json")
+	if err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	}
 	defer file.Close()
+
+	// Create a JSON encoder
 	encoder := json.NewEncoder(file)
-	encoder.Encode(list[0])
+
+	file.Write([]byte("[")) //open bracket a start of file
+	for i := 0; i < len(list); i++ {
+		// Encode the data (write to the file)
+		if i > 0 {
+			file.Write([]byte(","))
+		}
+
+		err = encoder.Encode(list[i])
+		if err != nil {
+			fmt.Println("Error encoding JSON:", err)
+		}
+	}
+
+	file.Write([]byte("]")) //close bracket at end of file
 }
 
 func readJSON(fileName string) []Todo {

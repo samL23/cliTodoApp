@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	const fileName = "data.json"
+	const fileName = "output.json"
 	// fetch the previous todo elements from json files
 	// add todo element into a slice
 	var title *string
