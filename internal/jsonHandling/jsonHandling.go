@@ -39,8 +39,17 @@ func AddItem(title string, desc string, filename string) {
 	saveToJson(todos, filename)
 }
 
-func DeleteItem(id int, title string) {
+func DeleteItem(id int, title string, filename string) {
+	if id <= 1 {
+		fmt.Println("error: please specify id example: \"delete -id 2\"")
+		return
+	}
+	id = id - 1 //convert to zero start id
+	fmt.Println("deleteing item")
+	todos := readJSON(filename)
+	todos = append(todos[:id], todos[id+1:]...)
 
+	saveToJson(todos, filename)
 }
 
 //-----
